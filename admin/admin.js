@@ -365,6 +365,7 @@
   function ensureShape(c) {
     c.site = c.site || {};
     c.site.hours = c.site.hours || {};
+    if (c.site.inventoryNote == null) c.site.inventoryNote = "";
     c.banner = c.banner || {}; c.banner.items = c.banner.items || [];
     c.hero = c.hero || {}; c.hero.ctaPrimary = c.hero.ctaPrimary || {}; c.hero.ctaSecondary = c.hero.ctaSecondary || {};
     c.stats = Array.isArray(c.stats) ? c.stats : [];
@@ -376,6 +377,13 @@
       c.sections[k].cards = c.sections[k].cards || [];
     });
     c.sections.toys.list = Array.isArray(c.sections.toys.list) ? c.sections.toys.list : [];
+    // New arrivals: a top-level block with the same card shape as the sections.
+    c.newArrivals = c.newArrivals || {};
+    if (c.newArrivals.eyebrow == null) c.newArrivals.eyebrow = "";
+    if (c.newArrivals.title == null) c.newArrivals.title = "";
+    if (c.newArrivals.intro == null) c.newArrivals.intro = "";
+    c.newArrivals.items = Array.isArray(c.newArrivals.items) ? c.newArrivals.items : [];
+    c.newArrivals.items.forEach(function (it) { if (it && !it.id) it.id = uid("n"); });
     c.about = c.about || {}; c.about.body = Array.isArray(c.about.body) ? c.about.body : [];
     c.visit = c.visit || {};
   }
@@ -393,6 +401,7 @@
     { id: "banner", label: "Banner messages", group: "Basics", render: panelBanner },
     { id: "hero", label: "Hero (top of page)", group: "Basics", render: panelHero },
     { id: "stats", label: "Stat highlights", group: "Basics", render: panelStats },
+    { id: "newArrivals", label: "New arrivals", group: "Basics", render: panelNewArrivals },
     { id: "apparel", label: "Apparel", group: "Sections", render: function (m) { return panelCardSection(m, "apparel", "Apparel"); } },
     { id: "art", label: "Art and gallery", group: "Sections", render: function (m) { return panelCardSection(m, "art", "Art and gallery"); } },
     { id: "gifts", label: "Gifts and souvenirs", group: "Sections", render: function (m) { return panelCardSection(m, "gifts", "Gifts and souvenirs"); } },
@@ -698,6 +707,7 @@
       ]),
       textField("Tagline", s, "tagline", { hint: "The short line under the shop name." }),
       textField("Blurb", s, "blurb", { textarea: true, rows: 3, hint: "A sentence or two describing the shop." }),
+      textField("Inventory note", s, "inventoryNote", { textarea: true, rows: 2, hint: "Shown as a small note under the product photos, for example that stock rotates and the exact items may change." }),
       el("div", { class: "grid-2" }, [
         textField("Phone (shown)", s, "phone"),
         textField("Phone (for tap to call)", s, "phoneHref", { hint: "Digits only, like +15418080980." }),
@@ -807,6 +817,36 @@
             ]),
             textField("Short line", it, "body", { textarea: true, rows: 2 }),
             imageField("Card photo", it, "image", it, "alt"),
+          ]);
+        },
+      }),
+    ]));
+  }
+
+  // ======================================================================
+  //  PANEL: NEW ARRIVALS (top-level block, same card shape as the sections)
+  // ======================================================================
+  function panelNewArrivals() {
+    var na = state.content.newArrivals;
+    na.items = Array.isArray(na.items) ? na.items : [];
+    return panelShell("New arrivals", "The few new items shown on the home page. Add, edit, remove, or reorder freely.", el("div", null, [
+      textField("Eyebrow", na, "eyebrow"),
+      textField("Title", na, "title"),
+      textField("Intro paragraph", na, "intro", { textarea: true, rows: 3 }),
+      el("div", { class: "subhead" }, "Items"),
+      listEditor({
+        items: na.items,
+        addLabel: "Add an item",
+        titleOf: function (it) { return it.title || it.kicker || "New item"; },
+        newItem: function () { return { id: uid("n"), kicker: "", title: "", body: "", image: "", alt: "" }; },
+        makeRow: function (it) {
+          return el("div", null, [
+            el("div", { class: "grid-2" }, [
+              textField("Kicker (small label)", it, "kicker"),
+              textField("Title", it, "title"),
+            ]),
+            textField("Short line", it, "body", { textarea: true, rows: 2 }),
+            imageField("Item photo", it, "image", it, "alt"),
           ]);
         },
       }),

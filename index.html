@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=2">
+  <link rel="stylesheet" href="assets/css/styles.css?v=3">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -221,6 +221,46 @@
       </div>
     </section>
 
+    <!-- ===================== NEW ARRIVALS (owner editable) ===================== -->
+    <section class="section band--shell">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <span class="sec-num" data-edit="newArrivals.eyebrow">Just in</span>
+          <h2 data-edit="newArrivals.title">New on the shelves</h2>
+          <p class="lead" data-edit="newArrivals.intro">We get fresh finds in all the time. Here is a peek at some of the latest, and the lineup changes often.</p>
+        </div>
+        <div class="grid grid--3" data-render="newArrivals">
+          <article class="card" data-reveal data-reveal-delay="0">
+            <figure class="frame"><div class="frame__inner" data-lb>
+              <img src="assets/img/bay-glass.jpg" alt="Three hand blown art glass vases with colorful confetti speckles on a glass shelf" loading="lazy" decoding="async" width="600" height="800">
+            </div></figure>
+            <span class="kicker card__kicker">Art glass</span>
+            <h3 class="card__title">Hand blown vases</h3>
+            <p class="card__body">Bright confetti glass, just unpacked.</p>
+          </article>
+
+          <article class="card" data-reveal data-reveal-delay="70">
+            <figure class="frame"><div class="frame__inner" data-lb>
+              <img src="assets/img/bay-jewelry-seaglass.jpg" alt="Display case of sea glass necklaces and earrings on kraft cards" loading="lazy" decoding="async" width="600" height="800">
+            </div></figure>
+            <span class="kicker card__kicker">Jewelry</span>
+            <h3 class="card__title">Sea glass necklaces</h3>
+            <p class="card__body">New pieces made from Oregon beach glass.</p>
+          </article>
+
+          <article class="card" data-reveal data-reveal-delay="140">
+            <figure class="frame"><div class="frame__inner" data-lb>
+              <img src="assets/img/bay-candles-soap.jpg" alt="Shelf of Pacific Wicks amber jar candles in Cucumber Mist, Caramel Coffee, and Ancient Amber" loading="lazy" decoding="async" width="600" height="800">
+            </div></figure>
+            <span class="kicker card__kicker">Candles</span>
+            <h3 class="card__title">Pacific Wicks scents</h3>
+            <p class="card__body">A fresh batch of small batch candles.</p>
+          </article>
+        </div>
+        <p class="inventory-note" data-edit="site.inventoryNote">Our inventory rotates often, so the exact items in these photos may not always be in stock. There is always something new to find.</p>
+      </div>
+    </section>
+
     <!-- ===================== ART GIVEBACK FEATURE ===================== -->
     <section class="section band">
       <div class="wrap">
@@ -329,6 +369,6 @@
     </figure>
   </div>
 
-  <script src="assets/js/site.js?v=2" defer></script>
+  <script src="assets/js/site.js?v=3" defer></script>
 </body>
 </html>

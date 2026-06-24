@@ -370,6 +370,19 @@ h1, h2, h3, h4 {
           mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/0.9rem no-repeat;
 }
 
+/* ---------- Inventory / rotating-stock note ---------- */
+.inventory-note {
+  margin-top: clamp(1.4rem, 3vw, 2.2rem);
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  font-size: 0.92rem; color: var(--ink-soft); max-width: 64ch;
+}
+.inventory-note::before {
+  content: ""; flex: none; width: 1.2rem; height: 1.2rem; margin-top: 0.12rem;
+  background: var(--coral-700);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M17.65 6.35A8 8 0 1 0 19.73 14h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z'/%3E%3C/svg%3E") center/1.1rem no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M17.65 6.35A8 8 0 1 0 19.73 14h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z'/%3E%3C/svg%3E") center/1.1rem no-repeat;
+}
+
 /* ---------- Stats row ---------- */
 .stats { display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 740px) { .stats { grid-template-columns: repeat(4, 1fr); } }

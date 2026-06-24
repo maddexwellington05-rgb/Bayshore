@@ -24,7 +24,8 @@
     "instagram": "https://www.instagram.com/bayshoregifts/",
     "mapEmbed": "https://www.google.com/maps?q=264+S+Broadway+Ave,+Coos+Bay,+OR+97420&output=embed",
     "mapLink": "https://www.google.com/maps/search/?api=1&query=264+S+Broadway+Ave,+Coos+Bay,+OR+97420",
-    "logo": "assets/img/logo-bayshore.jpg"
+    "logo": "assets/img/logo-bayshore.jpg",
+    "inventoryNote": "Our inventory rotates often, so the exact items in these photos may not always be in stock. There is always something new to find."
   },
   "banner": {
     "items": [
@@ -209,6 +210,37 @@
       "image": "assets/img/bay-toys-kites.jpg",
       "alt": "Kids corner with plush sea creatures, books, and rainbow kites hanging overhead"
     }
+  },
+  "newArrivals": {
+    "eyebrow": "Just in",
+    "title": "New on the shelves",
+    "intro": "We get fresh finds in all the time. Here is a peek at some of the latest, and the lineup changes often.",
+    "items": [
+      {
+        "id": "n1",
+        "kicker": "Art glass",
+        "title": "Hand blown vases",
+        "body": "Bright confetti glass, just unpacked.",
+        "image": "assets/img/bay-glass.jpg",
+        "alt": "Three hand blown art glass vases with colorful confetti speckles on a glass shelf"
+      },
+      {
+        "id": "n2",
+        "kicker": "Jewelry",
+        "title": "Sea glass necklaces",
+        "body": "New pieces made from Oregon beach glass.",
+        "image": "assets/img/bay-jewelry-seaglass.jpg",
+        "alt": "Display case of sea glass necklaces and earrings on kraft cards"
+      },
+      {
+        "id": "n3",
+        "kicker": "Candles",
+        "title": "Pacific Wicks scents",
+        "body": "A fresh batch of small batch candles.",
+        "image": "assets/img/bay-candles-soap.jpg",
+        "alt": "Shelf of Pacific Wicks amber jar candles in Cucumber Mist, Caramel Coffee, and Ancient Amber"
+      }
+    ]
   },
   "about": {
     "eyebrow": "Our story",

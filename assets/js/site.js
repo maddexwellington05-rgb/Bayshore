@@ -348,6 +348,8 @@
           renderBanner(content.banner.items || [], container);
         } else if (key === "stats" && content.stats) {
           renderStats(content.stats, container);
+        } else if (key === "newArrivals" && content.newArrivals) {
+          renderCards(content.newArrivals.items || [], container);
         } else if (content.sections && content.sections[key] && content.sections[key].cards) {
           renderCards(content.sections[key].cards || [], container);
         }
