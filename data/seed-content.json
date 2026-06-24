@@ -73,6 +73,14 @@
           "body": "Turtle, crab, and wave prints with local character.",
           "image": "assets/img/bay-apparel-2.jpg",
           "alt": "Coos Bay hoodies including a teal a little crabby design and a sea turtle print"
+        },
+        {
+          "id": "ap3",
+          "kicker": "Tees and tie dye",
+          "title": "Coos Bay and Stay Salty",
+          "body": "Coos Bay Oregon prints, seahorse and sea life graphics, and Stay Salty tie dye.",
+          "image": "assets/img/bay-apparel-3.jpg",
+          "alt": "Rack of Coos Bay Oregon tees, a seahorse graphic shirt, hoodies, and a Stay Salty tie dye shirt"
         }
       ]
     },
@@ -104,8 +112,16 @@
       "num": "03",
       "eyebrow": "Jewelry, gifts, and souvenirs",
       "title": "Something to take home",
-      "lead": "Spinner racks of handmade earrings and pendants from independent artists, tooled leather wallets and crossbody bags, Coos Bay mugs and Stay Salty tumblers, retro keychains, enamel pins, and a deep box of dollar fifty buttons. The easy, affordable end of the shop, and the fun one.",
+      "lead": "Sea glass jewelry and handmade pieces from independent artists, small batch candles and soap from local makers, fair trade pouches sewn from recycled sari silk, Coos Bay mugs and Stay Salty tumblers, retro keychains, enamel pins, and a deep box of dollar fifty buttons. The easy, affordable end of the shop, and the fun one.",
       "cards": [
+        {
+          "id": "g-seaglass",
+          "kicker": "Sea glass",
+          "title": "Sea glass jewelry",
+          "body": "Necklaces and earrings made from Oregon beach glass.",
+          "image": "assets/img/bay-jewelry-seaglass.jpg",
+          "alt": "Display case of sea glass necklaces and earrings on kraft cards"
+        },
         {
           "id": "g1",
           "kicker": "Handmade jewelry",
@@ -113,6 +129,22 @@
           "body": "Earrings, pendants, and small batch pieces that rotate often.",
           "image": "assets/img/bay-jewelry.jpg",
           "alt": "Spinner rack of handmade earrings beside a display of tooled leather wallets and a welcome sign"
+        },
+        {
+          "id": "g-candles",
+          "kicker": "Candles and soap",
+          "title": "Pacific Wicks and Lather",
+          "body": "Small batch candles and handcrafted soaps from a local Oregon maker.",
+          "image": "assets/img/bay-candles-soap.jpg",
+          "alt": "Shelf of Pacific Wicks amber jar candles in Cucumber Mist, Caramel Coffee, and Ancient Amber"
+        },
+        {
+          "id": "g-pouches",
+          "kicker": "Fair trade",
+          "title": "Sari fabric pouches",
+          "body": "Zip pouches and coin purses sewn from recycled sari silk, ethically made.",
+          "image": "assets/img/bay-pouches.jpg",
+          "alt": "Basket of colorful zip pouches and drawstring bags sewn from recycled sari fabric"
         },
         {
           "id": "g2",
@@ -123,20 +155,12 @@
           "alt": "Oak hutch displaying Coos Bay and Stay Salty mugs, tumblers, and coastal drinkware"
         },
         {
-          "id": "g3",
-          "kicker": "Keychains",
-          "title": "Take the coast home",
-          "body": "Retro Coos Bay and Oregon Coast keychains.",
+          "id": "g-souvenirs",
+          "kicker": "Souvenirs",
+          "title": "Keychains and buttons",
+          "body": "Retro Coos Bay keychains, enamel pins, and dollar fifty buttons.",
           "image": "assets/img/bay-keychains.jpg",
           "alt": "Spinner rack of Coos Bay and Oregon Coast souvenir keychains"
-        },
-        {
-          "id": "g4",
-          "kicker": "Buttons and pins",
-          "title": "Wear your words",
-          "body": "Badge Bomb buttons and enamel pins.",
-          "image": "assets/img/bay-buttons.jpg",
-          "alt": "Display boxes of Badge Bomb buttons and enamel pins"
         }
       ]
     },
