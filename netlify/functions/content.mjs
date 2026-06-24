@@ -1,6 +1,6 @@
 // GET /api/content?state=published|draft  -> raw content object
 // PUT /api/content                          -> save request body as draft (auth required)
-import { ensureSeeded, readContent, writeContent, readSeed } from '../lib/store.mjs';
+import { ensureSeeded, readContent, writeContent, readSeed, withDefaults } from '../lib/store.mjs';
 import { isAuthed } from '../lib/auth.mjs';
 import { json, unauthorized, badRequest } from '../lib/respond.mjs';
 
@@ -22,6 +22,11 @@ export default async (request, context) => {
     // bundled seed; if that is also unavailable, return a guaranteed value so
     // public hydration always has an object to read fields off of.
     if (content === null) content = readSeed();
+
+    // Backfill any seed keys missing from stored content (e.g. sections added
+    // after the owner first set up the CMS) so the admin and the live site
+    // never show a newly added section blank.
+    if (content) content = withDefaults(content);
 
     const cacheControl =
       state === 'draft' ? 'no-store' : 'public, max-age=30';
