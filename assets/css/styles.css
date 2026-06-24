@@ -240,6 +240,11 @@ h1, h2, h3, h4 {
 .status-pill.is-open .status-pill__dot { background: #36A36B; box-shadow: 0 0 8px rgba(54,163,107,0.6); }
 .status-pill.is-closed { color: var(--coral-700); }
 .status-pill.is-closed .status-pill__dot { background: var(--coral); box-shadow: 0 0 8px rgba(219,84,64,0.55); }
+/* In the dark footer, the generic .footer__list span color bleeds into the
+   pill's inner text span and washes it out on the pale pill. Restore the
+   pill's own ink so the hours stay readable. */
+.site-footer .status-pill [data-hours-text] { color: var(--harbor); }
+.site-footer .status-pill.is-closed [data-hours-text] { color: var(--coral-700); }
 
 /* ---------- Marquee ---------- */
 .marquee {
