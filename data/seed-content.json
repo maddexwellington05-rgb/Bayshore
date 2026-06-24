@@ -88,7 +88,7 @@
       "num": "02",
       "eyebrow": "Local art and the Art Giveback",
       "title": "Buy local, give back",
-      "lead": "Stained glass, prints, cards, and gifts from coastal artists fill the shelves. The artist series socks on the rack are part of an Art Giveback program, so a piece of every pair supports working artists and community mural projects. A fitting fit for a shop wrapped in a hand painted mural.",
+      "lead": "Stained glass, prints, cards, and gifts from coastal artists fill the shelves, alongside hand blown art glass and coastal decor. The artist series socks on the rack are part of an Art Giveback program, so a piece of every pair supports working artists and community mural projects. A fitting fit for a shop wrapped in a hand painted mural.",
       "cards": [
         {
           "id": "ar1",
@@ -105,6 +105,22 @@
           "body": "Stained glass, prints, and greeting cards.",
           "image": "assets/img/bay-cards-art.jpg",
           "alt": "Wall of greeting cards, stained glass art, and a coastal beach sign"
+        },
+        {
+          "id": "ar3",
+          "kicker": "Art glass",
+          "title": "Hand blown glass",
+          "body": "Confetti glass vases in bright coastal colors.",
+          "image": "assets/img/bay-glass.jpg",
+          "alt": "Three hand blown art glass vases with colorful confetti speckles on a glass shelf"
+        },
+        {
+          "id": "ar4",
+          "kicker": "Coastal decor",
+          "title": "Sea glass soap and decor",
+          "body": "Sea glass soaps, driftwood, rope knots, and shells.",
+          "image": "assets/img/bay-decor.jpg",
+          "alt": "Shelf of sea glass soaps, driftwood, rope knots, starfish, and a decorative fishing net"
         }
       ]
     },
@@ -112,7 +128,7 @@
       "num": "03",
       "eyebrow": "Jewelry, gifts, and souvenirs",
       "title": "Something to take home",
-      "lead": "Sea glass jewelry and handmade pieces from independent artists, small batch candles and soap from local makers, fair trade pouches sewn from recycled sari silk, Coos Bay mugs and Stay Salty tumblers, retro keychains, enamel pins, and a deep box of dollar fifty buttons. The easy, affordable end of the shop, and the fun one.",
+      "lead": "Sea glass and artist made earrings, rolled glass bead bracelets, small batch candles, botanic soaps and body butter, fair trade pouches sewn from recycled sari silk, Coos Bay mugs and Stay Salty tumblers, retro keychains, enamel pins, and a deep box of dollar fifty buttons. The easy, affordable end of the shop, and the fun one.",
       "cards": [
         {
           "id": "g-seaglass",
@@ -123,12 +139,20 @@
           "alt": "Display case of sea glass necklaces and earrings on kraft cards"
         },
         {
-          "id": "g1",
-          "kicker": "Handmade jewelry",
-          "title": "By the case",
-          "body": "Earrings, pendants, and small batch pieces that rotate often.",
-          "image": "assets/img/bay-jewelry.jpg",
-          "alt": "Spinner rack of handmade earrings beside a display of tooled leather wallets and a welcome sign"
+          "id": "g-earrings",
+          "kicker": "Artist earrings",
+          "title": "Hand made earrings",
+          "body": "Art print earrings on a rack that changes often.",
+          "image": "assets/img/bay-earrings.jpg",
+          "alt": "Wooden rack of colorful hand made art print earrings on cards"
+        },
+        {
+          "id": "g-bracelets",
+          "kicker": "Bracelets",
+          "title": "Rolled bead bracelets",
+          "body": "Glass seed bead roll on bracelets in every color.",
+          "image": "assets/img/bay-bracelets.jpg",
+          "alt": "Wooden bowl full of colorful rolled glass seed bead bracelets"
         },
         {
           "id": "g-candles",
@@ -137,6 +161,14 @@
           "body": "Small batch candles and handcrafted soaps from a local Oregon maker.",
           "image": "assets/img/bay-candles-soap.jpg",
           "alt": "Shelf of Pacific Wicks amber jar candles in Cucumber Mist, Caramel Coffee, and Ancient Amber"
+        },
+        {
+          "id": "g-bath",
+          "kicker": "Bath and body",
+          "title": "Soaps and body butter",
+          "body": "Botanic soaps, body butter, and exfoliating body wash.",
+          "image": "assets/img/bay-bath-body.jpg",
+          "alt": "Shelves of botanic soaps, body butter tins, and exfoliating body wash bottles"
         },
         {
           "id": "g-pouches",
