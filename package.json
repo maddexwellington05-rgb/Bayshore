@@ -1,0 +1,18 @@
+{
+  "name": "bayshore-gifts-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bayshore Gifts & Gallery: static site with a lightweight Netlify Blobs backend for owner-editable content.",
+  "license": "UNLICENSED",
+  "author": "Complex Web Designs",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo \"Static site, no build step\" && exit 0"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

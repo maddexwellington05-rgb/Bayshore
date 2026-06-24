@@ -1,0 +1,174 @@
+{
+  "_comment": "Canonical default content for Bayshore Gifts & Gallery. Baked into the static pages (works with no JS) AND used to seed Netlify Blobs on first run. The admin edits a draft copy of this shape; Publish promotes draft to published; public pages hydrate from published. Editable list items carry an 'id' so they can be added, removed, and reordered. No em dashes or en dashes anywhere in copy.",
+  "version": 1,
+  "site": {
+    "shop": "Bayshore Gifts & Gallery",
+    "shortName": "Bayshore",
+    "tagline": "The bright side of the coast.",
+    "blurb": "A sunny corner of the Coos Bay boardwalk packed with artisan gifts, local art, coastal apparel, handmade jewelry, toys, and souvenirs. Most of it is sustainably sourced from small makers and Oregon artists.",
+    "phone": "(541) 808-0878",
+    "phoneHref": "+15418080878",
+    "email": "bayshoregiftscoosbay@gmail.com",
+    "address": "264 S Broadway Ave, Coos Bay, OR 97420",
+    "addressLine1": "264 S Broadway Ave",
+    "addressLine2": "Coos Bay, OR 97420",
+    "hoursText": "Open daily, 11:00 am to 5:00 pm.",
+    "hoursShort": "Daily, 11 to 5",
+    "hours": {
+      "open": "11:00",
+      "close": "17:00",
+      "days": "daily",
+      "tz": "America/Los_Angeles"
+    },
+    "facebook": "https://www.facebook.com/p/Bayshore-Gifts-Gallery-61555025407392/",
+    "instagram": "https://www.instagram.com/bayshoregifts/",
+    "mapEmbed": "https://www.google.com/maps?q=264+S+Broadway+Ave,+Coos+Bay,+OR+97420&output=embed",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=264+S+Broadway+Ave,+Coos+Bay,+OR+97420",
+    "logo": "assets/img/logo-bayshore.jpg"
+  },
+  "banner": {
+    "items": [
+      { "id": "b1", "text": "Made in the USA" },
+      { "id": "b2", "text": "Women owned" },
+      { "id": "b3", "text": "Minimal plastics" },
+      { "id": "b4", "text": "Sustainably sourced" },
+      { "id": "b5", "text": "Local Oregon artists" },
+      { "id": "b6", "text": "Everyone welcome" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Gifts, gallery, and souvenirs on the boardwalk",
+    "title": "The bright side of the coast.",
+    "lead": "Bayshore Gifts & Gallery is a sunny corner of the Coos Bay boardwalk packed with artisan gifts, local art, coastal apparel, jewelry, toys, and souvenirs. Most of it is sustainably sourced from small businesses and Oregon makers.",
+    "image": "assets/img/bayshore-entrance.jpg",
+    "alt": "Bayshore Gifts and Gallery entrance with a painted octopus and kelp mural, a scallop shell enter sign, and an open gift shop sign",
+    "ctaPrimary": { "label": "Find us on Broadway", "href": "visit.html" },
+    "ctaSecondary": { "label": "See Instagram", "href": "https://www.instagram.com/bayshoregifts/" }
+  },
+  "stats": [
+    { "id": "s1", "value": "Daily", "label": "open 11 to 5" },
+    { "id": "s2", "value": "Boardwalk", "label": "on Coos Bay's South Broadway" },
+    { "id": "s3", "value": "Local", "label": "Oregon artists and small makers" },
+    { "id": "s4", "value": "Giveback", "label": "art series that supports muralists" }
+  ],
+  "sections": {
+    "apparel": {
+      "num": "01",
+      "eyebrow": "Coastal apparel",
+      "title": "Coos Bay on your chest",
+      "lead": "Soft hoodies and tees printed for the Oregon coast, from a little crabby to clean anchor, turtle, and wave designs. Sea glass, slate, teal, and charcoal, stacked by size and ready for foggy mornings on the bay.",
+      "cards": [
+        {
+          "id": "ap1",
+          "kicker": "Hoodies",
+          "title": "Anchor and wave",
+          "body": "Coos Bay and Oregon Coast pullovers in coastal colors.",
+          "image": "assets/img/bay-apparel-1.jpg",
+          "alt": "Wall of Coos Bay Oregon hoodies in teal, grey, and black with an anchor design"
+        },
+        {
+          "id": "ap2",
+          "kicker": "Graphics",
+          "title": "A little crabby",
+          "body": "Turtle, crab, and wave prints with local character.",
+          "image": "assets/img/bay-apparel-2.jpg",
+          "alt": "Coos Bay hoodies including a teal a little crabby design and a sea turtle print"
+        }
+      ]
+    },
+    "art": {
+      "num": "02",
+      "eyebrow": "Local art and the Art Giveback",
+      "title": "Buy local, give back",
+      "lead": "Stained glass, prints, cards, and gifts from coastal artists fill the shelves. The artist series socks on the rack are part of an Art Giveback program, so a piece of every pair supports working artists and community mural projects. A fitting fit for a shop wrapped in a hand painted mural.",
+      "cards": [
+        {
+          "id": "ar1",
+          "kicker": "Art Giveback",
+          "title": "Artist series socks",
+          "body": "Bold designs that support artists and murals.",
+          "image": "assets/img/bay-art-giveback.jpg",
+          "alt": "Rack of colorful artist series socks under an Art Giveback sign supporting artists and murals"
+        },
+        {
+          "id": "ar2",
+          "kicker": "Cards and gallery",
+          "title": "Coastal art and cards",
+          "body": "Stained glass, prints, and greeting cards.",
+          "image": "assets/img/bay-cards-art.jpg",
+          "alt": "Wall of greeting cards, stained glass art, and a coastal beach sign"
+        }
+      ]
+    },
+    "gifts": {
+      "num": "03",
+      "eyebrow": "Jewelry, gifts, and souvenirs",
+      "title": "Something to take home",
+      "lead": "Spinner racks of handmade earrings and pendants from independent artists, tooled leather wallets and crossbody bags, Coos Bay mugs and Stay Salty tumblers, retro keychains, enamel pins, and a deep box of dollar fifty buttons. The easy, affordable end of the shop, and the fun one.",
+      "cards": [
+        {
+          "id": "g1",
+          "kicker": "Handmade jewelry",
+          "title": "By the case",
+          "body": "Earrings, pendants, and small batch pieces that rotate often.",
+          "image": "assets/img/bay-jewelry.jpg",
+          "alt": "Spinner rack of handmade earrings beside a display of tooled leather wallets and a welcome sign"
+        },
+        {
+          "id": "g2",
+          "kicker": "Home and kitchen",
+          "title": "Coos Bay mugs",
+          "body": "Mugs, tumblers, and coastal drinkware.",
+          "image": "assets/img/bay-mugs-hutch.jpg",
+          "alt": "Oak hutch displaying Coos Bay and Stay Salty mugs, tumblers, and coastal drinkware"
+        },
+        {
+          "id": "g3",
+          "kicker": "Keychains",
+          "title": "Take the coast home",
+          "body": "Retro Coos Bay and Oregon Coast keychains.",
+          "image": "assets/img/bay-keychains.jpg",
+          "alt": "Spinner rack of Coos Bay and Oregon Coast souvenir keychains"
+        },
+        {
+          "id": "g4",
+          "kicker": "Buttons and pins",
+          "title": "Wear your words",
+          "body": "Badge Bomb buttons and enamel pins.",
+          "image": "assets/img/bay-buttons.jpg",
+          "alt": "Display boxes of Badge Bomb buttons and enamel pins"
+        }
+      ]
+    },
+    "toys": {
+      "num": "04",
+      "eyebrow": "Toys, kites, and kids",
+      "title": "Bring the kids, bring a kite",
+      "body": "A whole corner for younger beachgoers: plush sea creatures, science kits, travel games, free kids books, and a ceiling full of rainbow kites built for the coastal wind.",
+      "list": [
+        "Kites and windsocks for the headland",
+        "Plush, puzzles, and travel games",
+        "A free book box for little readers"
+      ],
+      "image": "assets/img/bay-toys-kites.jpg",
+      "alt": "Kids corner with plush sea creatures, books, and rainbow kites hanging overhead"
+    }
+  },
+  "about": {
+    "eyebrow": "Our story",
+    "title": "A coastal gift shop on the boardwalk",
+    "lead": "Bayshore Gifts & Gallery keeps the bright side of the coast in one sunny shop, from local art to the souvenir you did not know you needed.",
+    "body": [
+      "We are a family run gift shop and gallery at the south end of the Coos Bay Boardwalk, wrapped in a hand painted octopus and kelp mural. Inside you will find coastal apparel, handmade jewelry, local art, toys and kites, and a whole wall of souvenirs and sundries.",
+      "Most of what we carry is sustainably sourced from small businesses and Oregon makers, with minimal plastics and plenty of made in the USA. The artist series socks are part of an Art Giveback program, so a piece of every pair goes back to working artists and community mural projects.",
+      "Vintage 101 Marketplace is right next door if you are in the mood for antiques and vintage finds. Come wander both, take your time, and leave with a little of the coast in your bag."
+    ],
+    "image": "assets/img/bay-cards-art.jpg",
+    "alt": "Wall of greeting cards, stained glass art, and a coastal beach sign inside Bayshore Gifts and Gallery"
+  },
+  "visit": {
+    "eyebrow": "Visit us",
+    "title": "Find us on the boardwalk",
+    "lead": "Bayshore Gifts & Gallery sits at the south end of the Coos Bay Boardwalk on South Broadway, with Vintage 101 right next door. Easy parking, a sunny shop to wander, and the bay a short walk away. Open daily, 11:00 am to 5:00 pm."
+  }
+}

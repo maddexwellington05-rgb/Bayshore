@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Bayshore Gifts & Gallery: Content Manager</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- App mounts here. JS swaps in setup, login, or the dashboard. -->
+  <div id="app" aria-live="polite">
+    <div class="boot" role="status">
+      <div class="boot-mark">Bayshore</div>
+      <p>Loading your content manager...</p>
+    </div>
+  </div>
+
+  <!-- Global toast region for save / publish / error messages. -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="admin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Dependencies (Netlify installs these from package.json on deploy)
+node_modules/
+
+# Netlify local
+.netlify/
+
+# Local preview/editor config (not part of the site)
+.claude/
+
+# Internal build doc (not part of the deployed site)
+BUILD-CONTRACT.md
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log

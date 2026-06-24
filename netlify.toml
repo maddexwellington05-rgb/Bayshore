@@ -1,0 +1,51 @@
+# ==========================================================================
+# Bayshore Gifts & Gallery: Netlify configuration
+# Static publish from repo root. Functions added later live in
+# netlify/functions and are reached through the /api/* proxy.
+# ==========================================================================
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Ship the seed JSON inside every function bundle. The bundler only traces
+# static require/import, not the runtime readFileSync in store.mjs readSeed(),
+# so without this the seed is missing on deploy and first-run setup no-ops.
+[functions]
+  included_files = ["data/seed-content.json"]
+
+# Friendly API proxy: /api/content -> /.netlify/functions/content, etc.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
+# ----- Baseline security headers (all routes) -----
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+    X-XSS-Protection = "1; mode=block"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# ----- Images are stable: cache a week -----
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# ----- CSS/JS are NOT fingerprinted: always revalidate so deploys take effect
+#       immediately (Netlify serves an ETag, so unchanged files return a fast 304).
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
