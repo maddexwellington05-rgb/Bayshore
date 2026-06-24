@@ -57,7 +57,7 @@
       "num": "01",
       "eyebrow": "Coastal apparel",
       "title": "Coos Bay on your chest",
-      "lead": "Soft hoodies and tees printed for the Oregon coast, from a little crabby to clean anchor, turtle, and wave designs. Sea glass, slate, teal, and charcoal, stacked by size and ready for foggy mornings on the bay.",
+      "lead": "Soft hoodies and tees printed for the Oregon coast, from a little crabby to clean anchor, turtle, and wave designs, plus artist series socks that give back to working artists and murals. Sea glass, slate, teal, and charcoal, stacked by size and ready for foggy mornings on the bay.",
       "cards": [
         {
           "id": "ap1",
@@ -82,23 +82,23 @@
           "body": "Coos Bay Oregon prints, seahorse and sea life graphics, and Stay Salty tie dye.",
           "image": "assets/img/bay-apparel-3.jpg",
           "alt": "Rack of Coos Bay Oregon tees, a seahorse graphic shirt, hoodies, and a Stay Salty tie dye shirt"
+        },
+        {
+          "id": "ap4",
+          "kicker": "Art Giveback",
+          "title": "Artist series socks",
+          "body": "Bold designs, and a piece of every pair supports artists and murals.",
+          "image": "assets/img/bay-art-giveback.jpg",
+          "alt": "Rack of colorful artist series socks under an Art Giveback sign supporting artists and murals"
         }
       ]
     },
     "art": {
       "num": "02",
-      "eyebrow": "Local art and the Art Giveback",
-      "title": "Buy local, give back",
-      "lead": "Stained glass, prints, cards, and gifts from coastal artists fill the shelves, alongside hand blown art glass and coastal decor. The artist series socks on the rack are part of an Art Giveback program, so a piece of every pair supports working artists and community mural projects. A fitting fit for a shop wrapped in a hand painted mural.",
+      "eyebrow": "Local art and gallery",
+      "title": "Walls worth a slow look",
+      "lead": "Stained glass, prints, cards, and gifts from coastal artists fill the shelves, alongside hand blown art glass and coastal decor. A gallery worth a slow look, in a shop wrapped in a hand painted mural.",
       "cards": [
-        {
-          "id": "ar1",
-          "kicker": "Art Giveback",
-          "title": "Artist series socks",
-          "body": "Bold designs that support artists and murals.",
-          "image": "assets/img/bay-art-giveback.jpg",
-          "alt": "Rack of colorful artist series socks under an Art Giveback sign supporting artists and murals"
-        },
         {
           "id": "ar2",
           "kicker": "Cards and gallery",
