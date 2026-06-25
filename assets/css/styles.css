@@ -105,8 +105,10 @@ h1, h2, h3, h4 {
 .wrap { width: min(100% - 2.4rem, var(--wrap)); margin-inline: auto; }
 .section { padding-block: clamp(3.2rem, 7vw, 6rem); }
 .section--tight { padding-block: clamp(2.4rem, 5vw, 4rem); }
-.band { background: var(--seaglass); }
-.band--shell { background: var(--shell); }
+/* Tinted bands fade in and out of the page color so they read as a soft wash
+   rather than a hard-edged block dropped on the sand. */
+.band { background: linear-gradient(180deg, var(--sand) 0%, var(--seaglass) 15%, var(--seaglass) 85%, var(--sand) 100%); }
+.band--shell { background: linear-gradient(180deg, var(--sand) 0%, var(--seaglass) 15%, var(--seaglass) 85%, var(--sand) 100%); }
 
 .lead {
   font-size: clamp(1.08rem, 1rem + 0.5vw, 1.3rem);
@@ -406,7 +408,7 @@ h1, h2, h3, h4 {
 .map-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
 
 /* ---------- Page hero (interior pages) ---------- */
-.page-hero { position: relative; padding-block: clamp(2.6rem, 6vw, 4.6rem); background: var(--seaglass); border-bottom: 1px solid var(--line); overflow: hidden; }
+.page-hero { position: relative; padding-block: clamp(2.6rem, 6vw, 4.6rem); background: linear-gradient(180deg, var(--seaglass) 0%, var(--seaglass) 58%, var(--sand) 100%); overflow: hidden; }
 .page-hero::before {
   content: ""; position: absolute; right: -6vw; top: -8vw; width: 38vw; height: 38vw; max-width: 420px; max-height: 420px;
   border-radius: 50%; background: radial-gradient(circle, rgba(155,198,194,0.4), rgba(155,198,194,0) 70%); pointer-events: none;
@@ -446,14 +448,6 @@ h1, h2, h3, h4 {
 .footer__legal a { color: rgba(244,251,248,0.8); text-decoration: none; font-size: 0.85rem; }
 .footer__legal a:hover { color: #fff; text-decoration: underline; }
 
-/* ---------- Sticky mobile call bar ---------- */
-.sticky-cta {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 850;
-  display: none; align-items: center; justify-content: center; gap: 0.5rem;
-  background: var(--coral-700); color: #fff; text-decoration: none; font-weight: 700;
-  padding: 0.85rem 1rem; box-shadow: 0 -12px 30px -18px rgba(0,0,0,0.5);
-}
-@media (max-width: 640px) { .sticky-cta { display: flex; } body { padding-bottom: 3.4rem; } }
 
 /* ---------- Lightbox ---------- */
 .lightbox { position: fixed; inset: 0; z-index: 1500; display: none; align-items: center; justify-content: center; padding: 1.4rem; background: rgba(12,37,42,0.92); }
