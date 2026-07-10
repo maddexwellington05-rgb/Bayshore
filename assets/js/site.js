@@ -335,7 +335,18 @@
       var val = getPath(content, path);
       if (val == null) return;
       var as = el.getAttribute("data-edit-attr");
-      if (as) el.setAttribute(as, val);
+      if (as) {
+        // Image sources: if the stored value points at the SAME asset the page
+        // already baked in (ignoring any ?v= cache-buster), keep the baked src.
+        // Otherwise a stale default path from an old publish would strip our
+        // cache-buster and make the browser serve an outdated cached image.
+        // A genuinely different (owner-uploaded) image still overrides normally.
+        if (as === "src") {
+          var cur = el.getAttribute("src") || "";
+          if (cur.split("?")[0] === String(val).split("?")[0]) return;
+        }
+        el.setAttribute(as, val);
+      }
       else el.textContent = val;
     });
   }
