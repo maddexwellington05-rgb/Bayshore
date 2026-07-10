@@ -287,34 +287,44 @@ h1, h2, h3, h4 {
 .tide svg { display: block; width: 100%; height: clamp(28px, 4vw, 52px); }
 .tide--up svg { transform: rotate(180deg); }
 
-/* ---------- Hero ---------- */
-.hero { position: relative; padding-block: clamp(2.6rem, 6vw, 5rem); overflow: hidden; }
-.hero::before {
-  /* soft coral "sun" glow */
-  content: ""; position: absolute; z-index: 0; width: 46vw; height: 46vw; max-width: 560px; max-height: 560px;
+/* ---------- Hero (full-bleed photo background) ---------- */
+.hero { position: relative; overflow: hidden; isolation: isolate; }
+.hero__bg { position: absolute; inset: 0; z-index: -2; }
+.hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; }
+.hero__scrim {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(248,244,236,0.94) 0%, rgba(248,244,236,0.88) 40%, rgba(248,244,236,0.66) 62%, rgba(248,244,236,0.20) 82%, rgba(248,244,236,0.04) 100%),
+    linear-gradient(180deg, rgba(248,244,236,0.24) 0%, rgba(248,244,236,0.04) 40%, rgba(248,244,236,0.10) 78%, rgba(248,244,236,0.40) 100%);
+}
+.hero::after {
+  /* soft coral "sun" glow, sits above the scrim to keep the bright-side feel */
+  content: ""; position: absolute; z-index: -1; width: 46vw; height: 46vw; max-width: 560px; max-height: 560px;
   right: -8vw; top: -10vw; border-radius: 50%;
-  background: radial-gradient(circle, rgba(219,84,64,0.18), rgba(219,84,64,0) 68%);
+  background: radial-gradient(circle, rgba(219,84,64,0.16), rgba(219,84,64,0) 68%);
   pointer-events: none;
 }
-.hero__inner { position: relative; z-index: 1; display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: center; grid-template-columns: 1fr; }
-@media (min-width: 880px) { .hero__inner { grid-template-columns: 1.05fr 0.95fr; } }
-.hero__copy { display: grid; gap: 1.1rem; justify-items: start; }
+.hero__inner {
+  position: relative; z-index: 1; display: grid; grid-template-columns: 1fr;
+  padding-block: clamp(3.5rem, 9vw, 7rem) clamp(3rem, 7vw, 5.5rem);
+}
+.hero__copy { display: grid; gap: 1.1rem; justify-items: start; max-width: 640px; }
 .hero h1 { font-size: clamp(2.6rem, 1.6rem + 4.6vw, 4.6rem); font-weight: 800; }
-.hero .lead { font-size: clamp(1.1rem, 1rem + 0.6vw, 1.32rem); }
+.hero .lead { font-size: clamp(1.1rem, 1rem + 0.6vw, 1.32rem); max-width: 34em; }
 .hero__tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .tag {
   font-size: 0.8rem; font-weight: 600; color: var(--harbor);
   background: var(--shell); border: 1px solid var(--line-strong);
   padding: 0.35rem 0.75rem; border-radius: var(--r-pill); box-shadow: var(--shadow-soft);
 }
-.hero__media { position: relative; }
-.hero__media .frame { margin: 0; aspect-ratio: 3 / 4; max-width: 460px; margin-inline: auto; }
-.hero__badge {
-  position: absolute; right: -0.6rem; bottom: -0.9rem; z-index: 3;
-  width: clamp(76px, 12vw, 104px); height: auto; border-radius: 50%;
-  box-shadow: var(--shadow-card); border: 4px solid var(--shell);
+/* On narrow screens the copy spans full width, so wash the photo more evenly. */
+@media (max-width: 760px) {
+  .hero__scrim {
+    background:
+      linear-gradient(180deg, rgba(248,244,236,0.90) 0%, rgba(248,244,236,0.84) 42%, rgba(248,244,236,0.60) 72%, rgba(248,244,236,0.32) 100%);
+  }
+  .hero__bg img { object-position: 50% 30%; }
 }
-@media (max-width: 560px) { .hero__badge { width: 64px; right: 0.3rem; bottom: -0.5rem; } }
 
 /* ---------- Image frame (rounded coastal) ---------- */
 .frame { position: relative; margin: 0; border-radius: var(--r-lg); overflow: hidden; background: var(--seaglass); box-shadow: var(--shadow-card); }
