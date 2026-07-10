@@ -25,6 +25,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/styles.css?v=5">
+
+  <!-- Local business structured data (helps Google show hours, address, and map) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Bayshore Gifts & Gallery",
+    "description": "A sunny gift shop and gallery on the Coos Bay boardwalk with coastal apparel, local art, handmade jewelry, toys and kites, and souvenirs, sustainably sourced from small makers and Oregon artists.",
+    "url": "https://bayshoregiftscoosbay.com/",
+    "telephone": "+1-541-808-0878",
+    "email": "bayshoregiftscoosbay@gmail.com",
+    "image": "https://bayshoregiftscoosbay.com/assets/img/bayshore-entrance.jpg",
+    "logo": "https://bayshoregiftscoosbay.com/assets/img/logo-bayshore.jpg",
+    "priceRange": "$-$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "264 S Broadway Ave",
+      "addressLocality": "Coos Bay",
+      "addressRegion": "OR",
+      "postalCode": "97420",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "11:00",
+      "closes": "17:00"
+    }],
+    "sameAs": [
+      "https://www.facebook.com/p/Bayshore-Gifts-Gallery-61555025407392/",
+      "https://www.instagram.com/bayshoregifts/"
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
