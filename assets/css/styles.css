@@ -454,6 +454,8 @@ h1, h2, h3, h4 {
   display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; align-items: center; justify-content: space-between;
 }
 .footer__credit { color: rgba(244,251,248,0.7); font-size: 0.85rem; }
+.footer__credit a { color: inherit; }
+.footer__credit a:hover { color: #fff; }
 .footer__legal { display: flex; gap: 1.1rem; }
 .footer__legal a { color: rgba(244,251,248,0.8); text-decoration: none; font-size: 0.85rem; }
 .footer__legal a:hover { color: #fff; text-decoration: underline; }
